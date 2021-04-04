@@ -1,0 +1,100 @@
+.forms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_card {
+    display: none;
+    width: 350px;
+    max-width: 90%;
+    padding: 40px 20px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 5px #888;
+
+    .input_field {
+        display: block;
+        margin: 10px 0;
+
+        > * {
+            display: block;
+            color: #333;
+        }
+
+        label::after {
+            content: ':';
+        }
+
+        input {
+            background-color: #fcfcfc;
+            border-radius: 5px;
+            border: 2px solid #f4f4f4;
+            width: 100%;
+            margin-top: 10px;
+            padding: 2px 5px;
+        }
+        select {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            -webkit-appearance: none;
+            border: 2px solid #f4f4f4;
+            background-color: #fcfcfc;
+        }
+        
+        select:focus ,
+        input:focus {
+            border-color: #c4dcfa ;
+            box-shadow: 0 0 4px #c4d2fd;
+        }
+        
+        hr {
+            background-image: linear-gradient(to right, transparent, #333, transparent);
+            background-color: white;
+        }
+    }
+        
+    .buttons  {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            padding: 5px 30px;
+            border-radius: 5px;
+            border: none;
+            background: #fff;
+            color: #549cf8;
+
+            &[type="submit"] ,
+            &.blue {
+                background: #549cf8;
+                color: #eee;
+            }
+
+            &:hover ,
+            &:focus {
+                filter: brightness(120%);
+            }
+
+            &[disabled] {
+                background-color: #d7d5d5;
+                color: rgb(148, 142, 142);
+
+                &:hover {
+                    filter: none;
+                }
+            }
+            
+        }
+        
+    }
+
+
+    &.active {
+        display: block;
+    }
+}

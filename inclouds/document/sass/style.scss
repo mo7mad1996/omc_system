@@ -1,0 +1,14 @@
+@import "helpers/reset";
+@import "helpers/anmation";
+
+
+body {
+    direction: rtl;
+    background-color: #f3f3f3;
+
+    @import "login/login";
+    @import "components/header/header";
+
+    @import "components/forms/forms";
+    @import "components/tables/tables";
+}

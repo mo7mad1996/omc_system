@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+
+.text-left {
+    text-align: left;
+}
+
+.print-none {
+    @media print {
+        display: none;
+    }
+}

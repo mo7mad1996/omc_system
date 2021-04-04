@@ -1,0 +1,27 @@
+
+.Login {
+    display: flex;
+    height: 100vh;
+    background-color: #ddd;
+    justify-content: center;
+    align-items: center;
+    
+    @import "form";
+}
+
+/* error messages */
+
+.err {
+    position: fixed;
+
+    bottom: 1rem;
+    left: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: tomato;
+    color: #eee;
+
+    animation: notfication .3s cubic-bezier(.23,1.09,1,1.99) forwards;  
+}
+
+/* end error messages */

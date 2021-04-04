@@ -1,0 +1,26 @@
+/* messages */
+
+.msg {
+    position: fixed;   
+    padding: 10px;
+    bottom: 1rem;
+    left: 1rem;
+    border-radius: 5px;
+    color: white;
+    box-shadow: -2px 14px 10px rgba(0, 0, 0, 0.219);  
+    animation: notfication .2s linear forwards;
+
+    b {
+        display: block;
+        text-align: center;
+    }
+
+    &.Success {
+        background: rgb(71, 223, 57);
+    }
+
+    &.err {
+        background: rgb(223, 57, 57);
+    }
+
+}

@@ -1,0 +1,95 @@
+.search_by {
+    background-color: #eee;
+
+    h3 {
+        padding: 10px 20px 30px;
+        font-size: 20px ;
+    }
+    .form-control {
+        display: flex;
+
+        .group  {
+            width: 300px;
+            padding: 10px;
+
+            select {
+                width: 100%;
+                display: block;    
+                appearance: none;
+                border: 3px solid #ccc;
+                color: #222;
+                background: rgb(238, 237, 237);
+                padding: 2px 5px;
+                border-radius: 5px;
+                margin: 10px 0;
+                cursor: pointer;
+            }
+            
+            form {
+                width: 100%;
+                input {
+                    width: 100%;
+                    display: block;
+                    margin: 10px 0;
+                }
+
+                button {
+                    width: 100%;
+                    display: block;
+                    background-color: lightblue;
+                    color: #333;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    border: none;
+                    
+                    &:hover ,
+                    &:focus {
+                        filter: brightness(110%);
+                    }
+                }
+
+            }
+            .n {
+                padding: 10px ;
+
+                .printBTN {
+                    padding: 5px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: lightgrey;
+                    margin: 0 10px;
+                    
+                    &:hover ,
+                    &:focus {
+                        filter: brightness(110%);
+                    }
+                }
+            }
+
+            summary {
+                padding: 10px 5px;
+            }
+            #colomns {
+                padding: 10px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                >div {
+                    width: 200px;
+                    background-color: lightgray;
+                    display: flex;
+                    padding: 5px 10px;
+
+                    label {
+                        flex: 1;
+                    cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    @media print {
+        display: none;
+    }
+}
