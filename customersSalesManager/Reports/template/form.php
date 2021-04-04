@@ -23,7 +23,7 @@
                 <button onclick="print()" class="printBTN">طباعه</button>
             </div>
             <details>
-                <summary>الاعمده</summary>
+                <summary><span>الاعمده</span></summary>
                 <div id="colomns"></div>
             </details>
         </div>

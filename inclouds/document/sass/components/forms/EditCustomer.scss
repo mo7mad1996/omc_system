@@ -1,0 +1,22 @@
+.EditCustomer {
+    li {
+        details {
+            summary {
+                padding: 10px 5px;
+                background-color: rgba(255, 255, 255, 0.432);
+
+                >* {
+                    display: inline-block;
+                }
+            }
+            
+            form {
+                padding: 5px;
+            }
+        }
+            
+        &:nth-of-type(even) {
+            background-color: rgba(152, 162, 179, 0.534);
+        }
+    }
+}

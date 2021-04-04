@@ -103,8 +103,8 @@
 			</div>
 
 			<div class="input_field">
-				<label for="phone">رقم التليفون</label>
-				<input id="phone" name="phone" type="text">
+				<label for="phone">رقم التليفون [11 رقم]</label>
+				<input id="phone" name="phone" type="tel" pattern="[0-9]{11}">
 			</div>
 
 
@@ -165,6 +165,11 @@
 			<div class="input_field">
 				<label for="res1_continue_date">تاريخ المتابعه</label>
 				<input id="res1_continue_date" name="res1_continue_date" type="date">
+			</div>
+
+			<div class="input_field">
+				<label for="res1_next_continue_date">تاريخ المتابعه المستقبليه</label>
+				<input id="res1_next_continue_date" name="res1_next_continue_date" type="date">
 			</div>
 		</div>
 	</fieldset>
@@ -261,7 +266,7 @@
 		}
 	}
 
-	
+
 	let theLocation = location.toString().split('?')[0];
 	document.getElementById('location').setAttribute('value', theLocation);
 </script>

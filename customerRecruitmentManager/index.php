@@ -12,6 +12,10 @@
         
         require_once "../inclouds/document/static/head.php";
         
+        include "../inclouds/document/static/components/header.php";
+        include "templates/navbar/navbar.php";
+
+
         // template
         include "templates/index.php";
         

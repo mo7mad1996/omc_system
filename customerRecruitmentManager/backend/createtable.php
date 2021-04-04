@@ -19,6 +19,7 @@
         res1_offer BOOLEAN,
         res1_vist BOOLEAN,
         res1_continue_date DATE,
+        res1_next_continue_date DATE,
         
         res2_sent BOOLEAN,
         res2_vist BOOLEAN,

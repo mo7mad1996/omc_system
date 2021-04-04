@@ -5,6 +5,7 @@
         padding: 10px 20px 30px;
         font-size: 20px ;
     }
+
     .form-control {
         display: flex;
 
@@ -49,6 +50,7 @@
                 }
 
             }
+
             .n {
                 padding: 10px ;
 
@@ -67,7 +69,19 @@
             }
 
             summary {
-                padding: 10px 5px;
+                padding: 0 5px;
+
+                span {
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                    background: lightblue;
+                    user-select: none;
+                }
+
+                &:focus ,
+                &:hover {
+                    filter: brightness(110%);
+                }
             }
             #colomns {
                 padding: 10px;

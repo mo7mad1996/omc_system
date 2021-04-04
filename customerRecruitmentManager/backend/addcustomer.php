@@ -19,6 +19,8 @@
         $res1_offer = isset($_POST['res1_offer']) ? 1 : 0;
         $res1_vist = isset($_POST['res1_vist']) ? 1 : 0;
         $res1_continue_date = $_POST['res1_continue_date'];
+        $res1_next_continue_date = $_POST['res1_next_continue_date'];
+
         $res2_sent = isset($_POST['res2_sent']) ? 1 : 0;
         $res2_vist = isset($_POST['res2_vist']) ? 1 : 0;
         $res2_reject = isset($_POST['res2_reject']) ? 1 : 0;
@@ -29,9 +31,9 @@
 
         $sql = "
            INSERT INTO customers 
-                ( `init_date`, `cumpany_name`, `company_type`, `city`, `area`, `responsible_name`, `job`, `phone`, `email`, `service_type`, `res1_called`, `res1_offer`, `res1_vist`, `res1_continue_date`, `res2_sent`, `res2_vist`, `res2_reject`, `res2_accept`, `res2_continue_date`, `nots`, `added_by`)
+                ( `init_date`, `cumpany_name`, `company_type`, `city`, `area`, `responsible_name`, `job`, `phone`, `email`, `service_type`, `res1_called`, `res1_offer`, `res1_vist`, `res1_continue_date`, `res1_next_continue_date`, `res2_sent`, `res2_vist`, `res2_reject`, `res2_accept`, `res2_continue_date`, `nots`, `added_by`)
             VALUES 
-                ( '$init_date', '$cumpany_name', '$company_type', '$city', '$area', '$responsible_name', '$job', '$phone', '$email', '$service_type', '$res1_called', '$res1_offer', '$res1_vist', '$res1_continue_date', '$res2_sent', '$res2_vist', '$res2_reject', '$res2_accept', '$res2_continue_date', '$nots', $added_by)
+                ( '$init_date', '$cumpany_name', '$company_type', '$city', '$area', '$responsible_name', '$job', '$phone', '$email', '$service_type', '$res1_called', '$res1_offer', '$res1_vist', '$res1_continue_date', '$res1_next_continue_date', '$res2_sent', '$res2_vist', '$res2_reject', '$res2_accept', '$res2_continue_date', '$nots', $added_by)
         ";
 
         mysqli_query($conn, $sql);
