@@ -2,14 +2,16 @@
 
     session_start();
     
-    if( json_decode($_SESSION['user'])->permission == 'customerRecruitmentManager' ) {
+    if( json_decode($_SESSION['user'])->permission == 'laborRecruitmentManager' ) {
+
         require_once "../../inclouds/database/connect.php";
+        require_once "../../LaborMarketingManager/addEmployee/template/data.php";
         
         // static variables
-        $page_name = "متابعه العملاء";
+        $page_name = "متابعه العمال";
         
         require_once "../../inclouds/document/static/head.php";
-
+        
         include "../../inclouds/document/static/components/header.php";
         include "../templates/navbar/navbar.php";
 
@@ -20,4 +22,3 @@
     } else {
         header('Location: /');
     }
-        

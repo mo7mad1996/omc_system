@@ -4,10 +4,10 @@
 
         <li class="nav-item">
           <a 
-            class="nav-link " 
+            class="nav-link active" 
             href="/<?php echo json_decode($_SESSION['user'])->permission ;?>"
             >
-            إضافه عميل 
+            إضافه عامل 
            </a>
         </li>
 
@@ -16,10 +16,9 @@
             class="nav-link active" 
             href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/Today'sFollow-up"
             >
-              متابعه العملاء
+              متابعه العمال
            </a>
         </li>
-
 
     </div>
   </nav>

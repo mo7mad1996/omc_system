@@ -8,12 +8,8 @@
             array_pop($arr);
             array_pop($arr);
             array_pop($arr);
-            echo "<pre>";
-            print_r($arr);
-            echo "</pre>";
+            
             foreach($arr as $key => $value) {
-
-
                 $sql = "UPDATE customers SET `$key` = '$value' WHERE id = " . $_GET['id'];
                 $res = mysqli_query($conn, $sql);
             }

@@ -139,7 +139,7 @@
 				<label for="res1_called">تم الاتصال</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res1_called" name="res1_called" />
+					<input type="checkbox" value="1" id="res1_called" name="res1_called" />
 					<label for="res1_called"></label>
 				</div>
 			</div>
@@ -148,7 +148,7 @@
 				<label for="res1_offer">طلب عرض</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res1_offer" name="res1_offer" />
+					<input type="checkbox" value="1" id="res1_offer" name="res1_offer" />
 					<label for="res1_offer"></label>
 				</div>
 			</div>
@@ -157,7 +157,7 @@
 				<label for="res1_vist">طلب زياره</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res1_vist" name="res1_vist" />
+					<input type="checkbox" value="1" id="res1_vist" name="res1_vist" />
 					<label for="res1_vist"></label>
 				</div>
 			</div>
@@ -184,7 +184,7 @@
 				<label for="res2_sent">تم ارسال العرض</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res2_sent" name="res2_sent" />
+					<input type="checkbox" value="1" id="res2_sent" name="res2_sent" />
 					<label for="res2_sent"></label>
 				</div>
 			</div>
@@ -193,7 +193,7 @@
 				<label for="res2_vist">تم الزياره</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res2_vist" name="res2_vist" />
+					<input type="checkbox" value="1" id="res2_vist" name="res2_vist" />
 					<label for="res2_vist"></label>
 				</div>
 			</div>
@@ -202,7 +202,7 @@
 				<label for="res2_reject">تم رفض العرض</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res2_reject" name="res2_reject" />
+					<input type="checkbox" value="1" id="res2_reject" name="res2_reject" />
 					<label for="res2_reject"></label>
 				</div>
 			</div>
@@ -211,7 +211,7 @@
 				<label for="res2_accept">تم قبول العرض</label>
 
 				<div class="squaredThree">
-					<input type="checkbox" value="None" id="res2_accept" name="res2_accept" />
+					<input type="checkbox" value="1" id="res2_accept" name="res2_accept" />
 					<label for="res2_accept"></label>
 				</div>
 			</div>
@@ -225,12 +225,23 @@
 
 	<hr>
 
-	<div class="input_group">
-		<div class="input_field">
-			<label for="nots">ملاحظات</label>
-			<input id="nots" name="nots" type="text">
-		</div>
-	</div>
+	<fieldset>
+		<legend>ملاحظات</legend>
+
+			<div class='input_group'>
+			
+				<div class='input_field'>
+					<label for='nots'>ملاحظات</label>
+					<input id='nots' name='nots' type='text' >
+				</div>
+
+				<div class='input_field'>
+					<label for='LastCallDate'>تاريخ اخر اتصال</label>
+					<input id='LastCallDate' name='LastCallDate' type='date' >
+				</div>
+			</div>
+
+	</fieldset>
 
 	<input type="hidden" value="<?php echo json_decode($_SESSION['user'])->id ; ?>" name="added_by">
 	<input type="hidden" id="location" name="location">

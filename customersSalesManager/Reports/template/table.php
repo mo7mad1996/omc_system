@@ -1,7 +1,5 @@
 
 <?php
-    include "template/data.php";
-
     if($rows_count > 0){
         echo '<table class="table table-striped ">
             <thead>
@@ -21,12 +19,14 @@
                     <th scope="col" class="res1_offer">طلب عرض</th>
                     <th scope="col" class="res1_vist">طلب زياره</th>
                     <th scope="col" class="res1_continue_date">تاريخ المتابعه</th>
+                    <th scope="col" class="res1_next_continue_date">تاريخ المتابعه المستقبليه</th>
                     <th scope="col" class="res2_sent">تم ارسال العرض</th>
                     <th scope="col" class="res2_vist">تم الزياره</th>
                     <th scope="col" class="res2_reject">تم رفض العرض</th>
                     <th scope="col" class="res2_accept">تم قبول العرض</th>
                     <th scope="col" class="res2_continue_date">تاريخ المتابعه</th>
                     <th scope="col" class="nots">ملاحظات</th>
+                    <th scope="col" class="LastCallDate">تاريخ اخر اتصال</th>
                     <th scope="col" class="added_by">اضيف بواسطه</th>
                 </tr>
             </thead>
@@ -58,12 +58,14 @@
                     <td class='res1_offer'>" . $row['res1_offer'] . "</td>
                     <td class='res1_vist'>" . $row['res1_vist'] . "</td>
                     <td class='res1_continue_date'>" . $row['res1_continue_date'] . "</td>
+                    <td class='res1_next_continue_date'>" . $row['res1_next_continue_date'] . "</td>
                     <td class='res2_sent'>" . $row['res2_sent'] . "</td>
                     <td class='res2_vist'>" . $row['res2_vist'] . "</td>
                     <td class='res2_reject'>" . $row['res2_reject'] . "</td>
                     <td class='res2_accept'>" . $row['res2_accept'] . "</td>
                     <td class='res2_continue_date'>" . $row['res2_continue_date'] . "</td>
                     <td class='nots'>" . $row['nots'] . "</td>
+                    <td class='LastCallDate'>" . $row['LastCallDate'] . "</td>
                     <td class='added_by'>" . $addedBy . "</td>
                 </tr>
                 

@@ -1,6 +1,5 @@
 <form class="addWorkers" action="/laborRecruitmentManager/backend/addWorkers.php" method="POST">
 
-
 	<fieldset>
 		<legend>الميعاد</legend>
 		<div class="input_group">
@@ -26,6 +25,7 @@
 		</div>
 	</fieldset>
 
+	<hr>
 
 	<fieldset>
 		<legend>البيانات الشخصيه</legend>
@@ -51,9 +51,9 @@
 			</div>
 
 			<div class="input_field">
-				<label for="phone">رقم الهاتف المحمول</label>
+				<label for="phone">رقم الهاتف المحمول [11 رقم] </label>
 
-				<input name="phone" id="phone" type="text" />
+				<input name="phone" id="phone" type="فثءف" pattern="[0-9]{11}" />
 			</div>
 
 			<div class="input_field">
@@ -96,6 +96,7 @@
 		</div>
 	</fieldset>
 
+	<hr>
 
 	<fieldset>
 		<legend>بيانات اساسيه</legend>
@@ -119,16 +120,28 @@
 				<label for="nots">ملاحظات</label>
 				<input id="nots" name="nots" />
 			</div>
+
+			<div class="input_field">
+				<label for="next_continue_date">تاريخ المتابعه المستقبليه</label>
+				<input id="next_continue_date" name="next_continue_date" type="date" />
+			</div>
 		</div>
 	</fieldset>
 
+	<hr>
 
 	<fieldset>
-		<legend>المتابعه</legend>
+		<legend>متابعه 1</legend>
+
 		<div class="input_group">
 
 			<div class="input_field">
-				<label for="continue1">متابعه 1</label>
+				<label for="continue1_date">تاريخ المتابعه</label>
+				<input type="date" id="continue1_date" name="continue1_date" />
+			</div>
+
+			<div class="input_field">
+				<label for="continue1">النتيجه</label>
 
 				<select name="continue1" id="continue1">
 					<option value="1">تجهيز اوراق</option>
@@ -141,9 +154,23 @@
 					<option value="8">اختبار سائقين</option>
 				</select>
 			</div>
+		</div>
+	</fieldset>
+
+	<hr>
+
+	<fieldset>
+		<legend>متابعه 2</legend>
+
+		<div class="input_group">
+			<div class="input_field">
+				<label for="continue2_date">تاريخ المتابعه</label>
+				<input type="date" id="continue2_date" name="continue2_date" />
+			</div>
+
 
 			<div class="input_field">
-				<label for="continue2">متابعه 2</label>
+				<label for="continue2">النتيجه</label>
 
 				<select name="continue2" id="continue2">
 					<option value="1">تجهيز اوراق</option>
@@ -156,9 +183,22 @@
 					<option value="8">اختبار سائقين</option>
 				</select>
 			</div>
+		</div>
+	</fieldset>
+
+	<hr>
+
+	<fieldset>
+		<legend>متابعه 3</legend>
+		<div class="input_group">
 
 			<div class="input_field">
-				<label for="continue3">متابعه 3</label>
+				<label for="continue3_date">تاريخ المتابعه</label>
+				<input type="date" id="continue3_date" name="continue3_date" />
+			</div>
+
+			<div class="input_field">
+				<label for="continue3">النتيجه</label>
 
 				<select name="continue3" id="continue3">
 					<option value="1">تجهيز اوراق</option>
@@ -171,7 +211,15 @@
 					<option value="8">اختبار سائقين</option>
 				</select>
 			</div>
+		</div>
+	</fieldset>
 
+	<hr>
+
+	<fieldset>
+		<legend>المكان</legend>
+
+		<div class="input_group">
 			<div class="input_field">
 				<label for="factory">المصنع</label>
 				<input name="factory" id="factory" />

@@ -2,8 +2,8 @@
     <?php 
         $sql = "
             SELECT *
-            FROM customers 
-            WHERE res1_next_continue_date = '" . date('Y-m-d') . "' 
+            FROM workers 
+            WHERE next_continue_date = '" . date('Y-m-d') . "' 
         ";
         // OR res2_continue_date = '" . date('Y-m-d') . "' 
         $res = mysqli_query($conn, $sql);
@@ -17,7 +17,7 @@
             
             while($row = mysqli_fetch_assoc($res)) {
 
-                include "templates/customers/customer.php";
+                include "templates/workers/worker.php";
                 
             }
             
