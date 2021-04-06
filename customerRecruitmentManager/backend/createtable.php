@@ -1,6 +1,9 @@
 <?php
 
-    require_once "../inclouds/database/connect.php";
+    if(!(@include_once "../inclouds/database/connect.php")) {
+        @include_once "../../inclouds/database/connect.php";
+    }
+
 
     $cols = array(
         "id"                        => "INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT",

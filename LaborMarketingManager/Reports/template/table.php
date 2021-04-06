@@ -16,9 +16,13 @@
                     <th scope="col" class="age">السن</th>
                     <th scope="col" class="result">النتيجه</th>
                     <th scope="col" class="nots">ملاحظات</th>
-                    <th scope="col" class="continue1">متابعه 1</th>
-                    <th scope="col" class="continue2">متابعه 2</th>
-                    <th scope="col" class="continue3">متابعه 3</th>
+                    <th scope="col" class="next_continue_date">تاريخ المتابعه المستقبليه</th>
+                    <th scope="col" class="continue1">نتيجه اول متابعه</th>
+                    <th scope="col" class="continue1_date">تاريخ اول متابعه</th>
+                    <th scope="col" class="continue2">نتيجه ثان متابعه</th>
+                    <th scope="col" class="continue2_date">تاريخ ثان متابعه</th>
+                    <th scope="col" class="continue3">نتيجه ثالث متابعه</th>
+                    <th scope="col" class="continue3_date">تاريخ ثالث متابعه</th>
                     <th scope="col" class="factory">المصنع</th>
                     <th scope="col" class="addedBy">اضيف عبر</th>
                 </tr>
@@ -46,9 +50,13 @@
                     <td class='age'>" . $row['age'] . "</td>
                     <td class='result'>" . $resultes[$row['result']] . "</td>
                     <td class='nots'>" . $row['nots'] . "</td>
+                    <td class='next_continue_date'>" . $row['next_continue_date'] . "</td>
                     <td class='continue1'>" . $resultes[$row['continue1']] . "</td>
+                    <td class='continue1_date'>" . $row['continue1_date'] . "</td>
                     <td class='continue2'>" . $resultes[$row['continue2']] . "</td>
+                    <td class='continue2_date'>" . $row['continue2_date'] . "</td>
                     <td class='continue3'>" . $resultes[$row['continue3']] . "</td>
+                    <td class='continue3_date'>" . $row['continue3_date'] . "</td>
                     <td class='factory'>" . $row['factory'] . "</td>
                     <td class='addedBy'>" . $addedBy . "</td>
                 </tr>

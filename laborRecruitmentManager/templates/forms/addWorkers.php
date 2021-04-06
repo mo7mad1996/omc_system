@@ -53,7 +53,7 @@
 			<div class="input_field">
 				<label for="phone">رقم الهاتف المحمول [11 رقم] </label>
 
-				<input name="phone" id="phone" type="فثءف" pattern="[0-9]{11}" />
+				<input name="phone" id="phone" type="tel" pattern="[0-9]{11}" />
 			</div>
 
 			<div class="input_field">
@@ -90,7 +90,7 @@
 			</div>
 
 			<div class="input_field">
-				<label form="age">السن</label>
+				<label for="age">السن</label>
 				<input name="age" id="age" type="number" value="21" />
 			</div>
 		</div>
@@ -103,7 +103,7 @@
 		<div class="input_group">
 
 			<div class="input_field">
-				<label form="result">النتيجه</label>
+				<label for="result">النتيجه</label>
 
 				<select name="result" id="result">
 					<option value="1">تجهيز اوراق</option>
@@ -151,7 +151,7 @@
 					<option value="5">غير مناسب للعمل</option>
 					<option value="6">مقابة مؤهلات</option>
 					<option value="7">غير مناسب للعمل</option>
-					<option value="8">اختبار سائقين</option>
+					<option value="0">اختبار سائقين</option>
 				</select>
 			</div>
 		</div>
@@ -180,7 +180,7 @@
 					<option value="5">غير مناسب للعمل</option>
 					<option value="6">مقابة مؤهلات</option>
 					<option value="7">غير مناسب للعمل</option>
-					<option value="8">اختبار سائقين</option>
+					<option value="0">اختبار سائقين</option>
 				</select>
 			</div>
 		</div>
@@ -208,7 +208,7 @@
 					<option value="5">غير مناسب للعمل</option>
 					<option value="6">مقابة مؤهلات</option>
 					<option value="7">غير مناسب للعمل</option>
-					<option value="8">اختبار سائقين</option>
+					<option value="0">اختبار سائقين</option>
 				</select>
 			</div>
 		</div>

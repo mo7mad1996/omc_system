@@ -1,5 +1,8 @@
 <?php
-require_once "../../inclouds/database/connect.php";
+include_once $_SERVER['REQUEST_SCHEME'] .'://' .  $_SERVER['HTTP_HOST'] . "/inclouds/database/connect.php";
+
+
+require_once "../../laborRecruitmentManager/backend/createTeable.php";
 
 $sql = "SELECT * FROM workers";
 

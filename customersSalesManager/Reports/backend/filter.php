@@ -1,5 +1,6 @@
 <?php
 require_once "../../inclouds/database/connect.php";
+require_once "../../customerRecruitmentManager/backend/createtable.php";
 
 $sql = "SELECT * FROM customers";
 

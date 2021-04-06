@@ -1,6 +1,9 @@
 <?php
-
-    include "../inclouds/database/connect.php";
+    // include_once $_SERVER['REQUEST_SCHEME'] .'://' .  $_SERVER['HTTP_HOST'] . "/inclouds/database/connect.php";
+    
+    if(!(@include_once "../inclouds/database/connect.php")) {
+        include_once "../../inclouds/database/connect.php";
+    }
 
     $cols = array(
         "id"                 => "INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT",
@@ -36,5 +39,5 @@
     $colomns = trim($colomns, ', ');
 
     $sql = "CREATE TABLE IF NOT EXISTS workers($colomns)";
-      
+    
     $res = mysqli_query($conn, $sql);
