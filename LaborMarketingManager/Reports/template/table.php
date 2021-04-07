@@ -17,6 +17,7 @@
                     <th scope="col" class="result">النتيجه</th>
                     <th scope="col" class="nots">ملاحظات</th>
                     <th scope="col" class="next_continue_date">تاريخ المتابعه المستقبليه</th>
+                    <th scope="col" class="final_call">تاريخ اخر اتصال</th>
                     <th scope="col" class="continue1">نتيجه اول متابعه</th>
                     <th scope="col" class="continue1_date">تاريخ اول متابعه</th>
                     <th scope="col" class="continue2">نتيجه ثان متابعه</th>
@@ -51,6 +52,7 @@
                     <td class='result'>" . $resultes[$row['result']] . "</td>
                     <td class='nots'>" . $row['nots'] . "</td>
                     <td class='next_continue_date'>" . $row['next_continue_date'] . "</td>
+                    <td class='final_call'>" . $row['final_call'] . "</td>
                     <td class='continue1'>" . $resultes[$row['continue1']] . "</td>
                     <td class='continue1_date'>" . $row['continue1_date'] . "</td>
                     <td class='continue2'>" . $resultes[$row['continue2']] . "</td>

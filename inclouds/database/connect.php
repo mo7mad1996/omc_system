@@ -42,9 +42,9 @@
                 permission
             )
             VALUES (
-                'admin',
+                'boss',
                 'محمد ابراهيم',
-                'admin',
+                'boss',
                 'CBD'
             )";
             $res = mysqli_query( $conn, $sql);

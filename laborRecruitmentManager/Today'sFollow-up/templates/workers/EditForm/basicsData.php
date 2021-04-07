@@ -25,5 +25,10 @@
             <label for="<?php echo $row['id']; ?>next_continue_date">تاريخ المتابعه المستقبليه</label>
             <input id="<?php echo $row['id']; ?>next_continue_date" name="next_continue_date" type="date"  value="<?php echo $row['next_continue_date']; ?>" />
         </div>
+
+        <div class="input_field">
+            <label for="<?php echo $row['id']; ?>final_call">تاريخ اخر اتصال</label>
+            <input id="<?php echo $row['id']; ?>final_call" name="final_call" type="date"  value="<?php echo $row['final_call']; ?>" />
+        </div>
     </div>
 </fieldset>

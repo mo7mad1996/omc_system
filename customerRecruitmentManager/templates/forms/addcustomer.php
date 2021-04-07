@@ -1,5 +1,4 @@
 <form class="addcustomer my-4" action="/customerRecruitmentManager/backend/addcustomer.php" method="POST">
-
 	<fieldset>
 		<legend>بيانات اساسيه</legend>
 		<div class="input_group">
@@ -228,23 +227,27 @@
 	<fieldset>
 		<legend>ملاحظات</legend>
 
-			<div class='input_group'>
-			
-				<div class='input_field'>
-					<label for='nots'>ملاحظات</label>
-					<input id='nots' name='nots' type='text' >
-				</div>
+		<div class='input_group'>
 
-				<div class='input_field'>
-					<label for='LastCallDate'>تاريخ اخر اتصال</label>
-					<input id='LastCallDate' name='LastCallDate' type='date' >
-				</div>
+			<div class='input_field'>
+				<label for='nots'>ملاحظات</label>
+				<input id='nots' name='nots' type='text'>
 			</div>
+
+			<div class='input_field'>
+				<label for='LastCallDate'>تاريخ اخر اتصال</label>
+				<input id='LastCallDate' name='LastCallDate' type='date'>
+			</div>
+		</div>
 
 	</fieldset>
 
+	<hr>
+
 	<input type="hidden" value="<?php echo json_decode($_SESSION['user'])->id ; ?>" name="added_by">
 	<input type="hidden" id="location" name="location">
+
+	<hr>
 
 	<div class="buttons">
 		<button type="submit">إضافه</button>
@@ -279,8 +282,7 @@
 
 
 	let theLocation = location.toString().split('?')[0];
-	document.getElementById('location').setAttribute('value', theLocation);
-</script>
+	document.getElementById('location').setAttribute('value', theLocation);</script>
 
 <?php
 	if(isset($_GET['msg'])) {

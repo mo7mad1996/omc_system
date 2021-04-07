@@ -30,6 +30,7 @@ var colomns = [
     { a: 'result', b: 'النتيجه' },
     { a: 'nots', b: 'ملاحظات' },
     { a: 'next_continue_date', b: 'تاريخ المتابعه المستقبليه' },
+    { a: 'final_call', b: 'تاريخ اخر اتصال' },
     { a: 'continue1', b: 'نتيجه اول متابعه' },
     { a: 'continue1_date', b: 'تاريخ اول متابعه' },
     { a: 'continue2', b: 'نتيجه اول متابعه' },

@@ -17,6 +17,7 @@
         "result"             => "smallint(6)",
         "nots"               => "VARCHAR(255)",
         "next_continue_date" => "DATE",
+        "final_call"         => "DATE",
         
         "continue1"          => "smallint(6)",
         "continue1_date"     => "DATE",

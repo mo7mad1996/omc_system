@@ -125,6 +125,11 @@
 				<label for="next_continue_date">تاريخ المتابعه المستقبليه</label>
 				<input id="next_continue_date" name="next_continue_date" type="date" />
 			</div>
+
+			<div class="input_field">
+				<label for="final_call">تاريخ اخر اتصال</label>
+				<input id="final_call" name="final_call" type="date" />
+			</div>
 		</div>
 	</fieldset>
 
