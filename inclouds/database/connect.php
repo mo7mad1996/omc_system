@@ -9,24 +9,28 @@
 
     if($conn) {
         // add users table
-        addUsersTable($conn)    ;    
-
+        if(function_exists("addUsersTable")) {
+            addUsersTable($conn);    
+        }
+        
         // add frist super admin
-        addSuperAdmin($conn);
+        if(function_exists("addSuperAdmin")) {
+            addSuperAdmin($conn);
+        }
     }
 
-    function addUsersTable($conn){
-        $colomns = " 
-            id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY ,
-            username TEXT NOT NULL ,
-            name TEXT NOT NULL ,
-            password TEXT NOT NULL , 
-            permission TEXT NOT NULL
-        ";
-        $sql = "CREATE TABLE IF NOT EXISTS users($colomns)";
-        $res = mysqli_query($conn, $sql);
-    }
 
+        function addUsersTable($conn) {
+            $colomns = " 
+                id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY ,
+                username TEXT NOT NULL ,
+                name TEXT NOT NULL ,
+                password TEXT NOT NULL , 
+                permission TEXT NOT NULL
+            ";
+            $sql = "CREATE TABLE IF NOT EXISTS users($colomns)";
+            $res = mysqli_query($conn, $sql);
+        }
 
 
     function addSuperAdmin($conn) {

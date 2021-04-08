@@ -1,0 +1,61 @@
+form.sendMail {
+    margin: auto;
+    width: 80%;
+
+    .checkAll{
+        margin-top: 10px;
+        padding: 5px 20px;
+        display: inline-flex;
+        background-color: lightblue;
+        border-radius: 20px;
+        width: 150px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        * {cursor: pointer;}
+    }
+
+    .customers {
+        padding: 20px 0;
+        
+        .customer {
+            padding: 5px 20px;
+            background-color: #e3e3e3;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            
+            * {
+                cursor: pointer;
+            }
+
+            label {
+                flex: 1;
+                display: block;
+
+                display: flex;
+            }
+        }
+    }
+
+    label {
+        user-select: none;
+    }
+    
+    textarea {
+        width: 100%;
+        display: block;
+        padding: 10px;
+        border: 2px solid #f4f4f4;
+        border-radius: 5px;
+
+        &:focus {
+            
+            border-color: #c4dcfa ;
+            box-shadow: 0 0 4px #c4d2fd;
+        }
+    }
+
+    
+}
