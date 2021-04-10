@@ -1,4 +1,4 @@
 # omc_system
 
 
-### DB_name: omc;
+### DB_name: omc
