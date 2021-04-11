@@ -23,6 +23,15 @@
         <li class="nav-item">
           <a 
             class="nav-link active" 
+            href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/Reports"
+            >
+              التقارير
+           </a>
+        </li>
+
+        <li class="nav-item">
+          <a 
+            class="nav-link active" 
             href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/sendMail"
             >
               ارسال ايميل

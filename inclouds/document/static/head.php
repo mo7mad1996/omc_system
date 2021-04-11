@@ -14,6 +14,6 @@
         <link rel="stylesheet" href="/inclouds/document/css/bootstrap.css" />
 
         <!-- my css files -->
-        <link rel="stylesheet" href="/inclouds/document/css/style3.css" />
+        <link rel="stylesheet" href="/inclouds/document/css/style.css" />
     </head>
 <body>

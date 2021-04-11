@@ -1,4 +1,4 @@
-<form action="/send/mail" class="form_card active sendMail">
+<form action="../backend/mail" class="form_card active sendMail">
     <h5 class="text-center mb-4">إرسال ايميل </h5>
     <input type="hidden" name="sms">
     <input type="hidden" name="location" id='location'>

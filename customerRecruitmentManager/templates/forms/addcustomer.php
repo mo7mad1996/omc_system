@@ -161,14 +161,14 @@
 				</div>
 			</div>
 
-			<div class="input_field">
+			<!-- <div class="input_field">
 				<label for="res1_continue_date">تاريخ المتابعه</label>
 				<input id="res1_continue_date" name="res1_continue_date" type="date">
-			</div>
+			</div> -->
 
 			<div class="input_field">
-				<label for="res1_next_continue_date">تاريخ المتابعه المستقبليه</label>
-				<input id="res1_next_continue_date" name="res1_next_continue_date" type="date">
+				<label for="next_continue_date">تاريخ المتابعه المستقبليه</label>
+				<input id="next_continue_date" name="next_continue_date" type="date">
 			</div>
 		</div>
 	</fieldset>
@@ -214,11 +214,11 @@
 					<label for="res2_accept"></label>
 				</div>
 			</div>
-
+<!-- 
 			<div class="input_field">
 				<label for="res2_continue_date">تاريخ المتابعه</label>
 				<input id="res2_continue_date" name="res2_continue_date" type="date">
-			</div>
+			</div> -->
 		</div>
 	</fieldset>
 

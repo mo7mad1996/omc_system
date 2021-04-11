@@ -21,14 +21,14 @@
         "res1_called"               => "BOOLEAN",
         "res1_offer"                => "BOOLEAN",
         "res1_vist"                 => "BOOLEAN",
-        "res1_continue_date"        => "DATE",
-        "res1_next_continue_date"   => "DATE",
+        // "res1_continue_date"        => "DATE",
+        "next_continue_date"        => "DATE",
         
         "res2_sent"                 => "BOOLEAN",
         "res2_vist"                 => "BOOLEAN",
         "res2_reject"               => "BOOLEAN",
         "res2_accept"               => "BOOLEAN",
-        "res2_continue_date"        => "DATE",
+        // "res2_continue_date"        => "DATE",
         
         "nots"                      => "VARCHAR(255)",
         "LastCallDate"              => "DATE",

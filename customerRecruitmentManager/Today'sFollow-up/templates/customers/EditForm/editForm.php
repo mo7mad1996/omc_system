@@ -1,6 +1,4 @@
 <?php
-
-
 echo     '
 <form class="addcustomer" action="../backend/EditCustomer.php" method="get">';
 

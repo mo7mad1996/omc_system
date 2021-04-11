@@ -27,7 +27,7 @@ form.addWorkers {
     .input_group {
         display: flex;
         flex-wrap: wrap;
-        color: #46465a;
+        color: #de0124;
 
         .input_field {
             padding: 10px;
@@ -38,6 +38,7 @@ form.addWorkers {
                 margin-bottom: 10px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
+
             select ,
             input:not([type="checkbox"])  {
                 padding: 5px 8px;
@@ -49,11 +50,13 @@ form.addWorkers {
                     box-shadow: 0 0 4px #5b4fa0;
                 }
             }
+
             input{
                 border: 2px solid #bda3ff;
                 background-color: #f5f1ff;
                 color: #5b4fa0;
             }
+            
             select {
                 
                 border: 2px solid #bda3ff;
@@ -62,8 +65,6 @@ form.addWorkers {
                 appearance: none;
             }
         }
-
-        
 
         /* .squaredThree */
         .squaredThree {

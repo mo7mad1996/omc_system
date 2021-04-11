@@ -1,11 +1,7 @@
 <?php
 
-    if(isset($_GET['sms'])) {
+    if(isset($_GET['sms']) && isset($_GET['to'])) {
 
-        echo "<pre>";
-            print_r($GLOBALS);
-        echo "</pre>";
-        
         if(
             mail( implode('; ', $_GET['to'] ), $_GET['subject'], $_GET['msg_input'] )){
             header("Location: ". $_GET['location'] . "?sent");

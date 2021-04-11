@@ -15,12 +15,13 @@
         </div>
 
         <div class="group col">
-            <div class="n">عدد الصفوف:
+            <div class="n">
+                <button onclick="print()" class="printBTN">طباعه</button>
+                عدد الصفوف:
                 <span>
                     <?php echo $rows_count ; ?>
                 </span>
 
-                <button onclick="print()" class="printBTN">طباعه</button>
             </div>
             <details>
                 <summary><span>الاعمده</span></summary>

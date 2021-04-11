@@ -3,7 +3,7 @@
         $sql = "
             SELECT *
             FROM customers 
-            WHERE res1_next_continue_date = '" . date('Y-m-d') . "' 
+            WHERE next_continue_date = '" . date('Y-m-d') . "' 
         ";
         // OR res2_continue_date = '" . date('Y-m-d') . "' 
         $res = mysqli_query($conn, $sql);

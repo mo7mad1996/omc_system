@@ -6,7 +6,7 @@
         require_once "../../inclouds/database/connect.php";
         
         // static variables
-        $page_name = "ارسال ايميل";
+        $page_name = "تقارير";
         
         require_once "../../inclouds/document/static/head.php";
 
