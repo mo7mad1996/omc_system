@@ -6,6 +6,12 @@
             </a>
         </div>
 
+		<div class='text-center'>
+			مجموعة عمال مصر<br>
+			للخدمات الصناعيه
+			والصناعات المتخصصه
+		</div>
+
 		<div class="menu">
 			<button>
 				<?php echo json_decode($_SESSION['user'])->name; ?>
@@ -16,7 +22,7 @@
 						<li>الاعدادات</li>
 					</a>
 					<a href="/logout">
-						<li class="red">خروج</li>
+						<li>خروج</li>
 					</a>
 				</ul>
 			</menu>

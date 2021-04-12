@@ -1,11 +1,10 @@
-
 <div class="container-fluid">
     <?php 
-        require_once "backend/filter.php";
+        require_once "../../LaborMarketingManager/Reports/backend/filter.php";
         
-        include "template/form.php";
-        include "template/table.php";
+        include "../../LaborMarketingManager/Reports/template/form.php";
+        include "../../LaborMarketingManager/Reports/template/table.php";
     ?>
 </div>
 
-<script src="template/table.js" ></script>
+<script src="../../LaborMarketingManager/Reports/template/table.js" ></script>

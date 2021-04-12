@@ -56,8 +56,11 @@
         }
 
         echo '</tbody></table>';
+        
     } else if($rows_count == 1) {
+        
         echo "<div class='company_id'>";
+
         while($row = mysqli_fetch_assoc($res)) {
             $l = "SELECT name FROM users WHERE id = " . $row['added_by'];
             $r = mysqli_query($conn, $l);
@@ -65,16 +68,17 @@
         while($d = mysqli_fetch_assoc($r)) {
                 $addedBy =  $d['name'];
         }
-            foreach($titles as $key => $value){
-               
+        
+        foreach($titles as $key => $value){
+            
 
-                    if(!($key == 'added_by')) {
-                        echo "<div class='$key'>$value <div>" . $row[$key] . "</div></div>";
-                    } else {
-                        echo "<div class='$key'>$value <div>" . $addedBy . "</div></div>";
-                    }
+                if(!($key == 'added_by')) {
+                    echo "<div class='$key'>$value <div>" . $row[$key] . "</div></div>";
+                } else {
+                    echo "<div class='$key'>$value <div>" . $addedBy . "</div></div>";
                 }
             }
+        }
 
         echo "</div>";
     }

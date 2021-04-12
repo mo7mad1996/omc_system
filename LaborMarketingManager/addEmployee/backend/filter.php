@@ -1,5 +1,7 @@
 <?php
-require_once "../../inclouds/database/connect.php";
+if(!(@include_once "../inclouds/database/connect.php")) {
+    include_once "../../inclouds/database/connect.php";
+}
 
 $sql = "SELECT * FROM workers";
 
