@@ -5,7 +5,6 @@
 }
 
 .form_card {
-    display: none;
     width: 350px;
     max-width: 90%;
     padding: 40px 20px 20px;
@@ -26,6 +25,7 @@
             content: ':';
         }
 
+        textarea ,
         input {
             background-color: #fcfcfc;
             border-radius: 5px;
@@ -45,6 +45,7 @@
             background-color: #fcfcfc;
         }
         
+        textarea:focus ,
         select:focus ,
         input:focus {
             border-color: #c4dcfa ;
@@ -91,10 +92,5 @@
             
         }
         
-    }
-
-
-    &.active {
-        display: block;
     }
 }

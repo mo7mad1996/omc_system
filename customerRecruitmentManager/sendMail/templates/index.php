@@ -51,8 +51,10 @@
     </div>
 
     <hr>
-
-    <input type="submit" value='ارسال'>
+    
+    <div class=buttons>
+        <button type="submit">إرسال</button>
+    </div>
 </form>
 
 
