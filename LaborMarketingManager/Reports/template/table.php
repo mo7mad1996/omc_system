@@ -57,7 +57,6 @@
             foreach($arr as $key => $value) {
 
                 switch($key) {
-
                     case 'the_day':
                         echo "<td class='$key' title='$value'>" . $dayes[$row[$key]] . "</td>";
                         break;
@@ -90,8 +89,8 @@
                         echo "<td class='$key' title='$value'>" . $addedBy . "</td>";
                         break;
 
-                    default:      
-                        echo "<th scope=row class='$key' title='$value'>" . $row[$key] . "</th>";
+                    default:
+                        echo "<td scope=row class='$key' title='$value'>". $row[$key] . "</td>";
                 }
             }
             echo "</tr>";

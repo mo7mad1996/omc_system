@@ -47,9 +47,9 @@
             echo "<tr>";
                 foreach($titles as $key => $value) {
                     if(!($key == 'added_by')) {
-                        echo "<td class='$key'>" . $row[$key] . "</td>";
+                        echo "<td class='$key' title='$value'>" . $row[$key] . "</td>";
                     }  else {
-                        echo "<td class='$key'>" . $addedBy . "</td>";
+                        echo "<td class='$key' title='$value'>" . $addedBy . "</td>";
                     }
                 }
             echo "</tr>";

@@ -17,7 +17,9 @@
                 if(!(@include_once "../inclouds/database/connect.php")) {
                     @include_once "../../inclouds/database/connect.php";
                 }
-                $sql = "SELECT id, phone , responsible_name, cumpany_name FROM customers WHERE phone != '' ";
+
+                
+                $sql = "SELECT id, phone , age, person_name FROM workers WHERE phone != '' ";
                 $res = mysqli_query($conn, $sql);
 
                 if(mysqli_num_rows($res) > 0) {
@@ -25,8 +27,8 @@
 
                     <div class="customer">
                         <label for="<?php echo $row['id']; ?>">
-                            <div class="col"><?php echo $row['cumpany_name']; ?></div>
-                            <div class="col"><?php echo $row['responsible_name']; ?></div>
+                            <div class="col"><?php echo $row['person_name']; ?></div>
+                            <div class="col"><?php echo $row['age']; ?></div>
                             <div class="col"><?php echo $row['phone']; ?></div>
                         </label>
                         <input id="<?php echo $row['id']; ?>" type="checkbox" value="+2<?php echo $row['phone']; ?>" name="to[]" />

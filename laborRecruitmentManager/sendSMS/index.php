@@ -1,10 +1,13 @@
 <?php
+
     session_start();
-    
-    if( json_decode($_SESSION['user'])->permission == 'customerRecruitmentManager' ) {
+
+    if( json_decode($_SESSION['user'])->permission == 'laborRecruitmentManager' ) {
+
+        $table_name = 'workers';
         require_once "../../inclouds/database/connect.php";
-        
-        
+        require_once "../../LaborMarketingManager/addEmployee/template/data.php";
+
         // static variables
         $page_name = "ارسال رساله نصيه";
         
@@ -15,9 +18,8 @@
 
         // template
         include "templates/index.php";
-        
+
         require_once "../../inclouds/document/static/page_close.php";
     } else {
         header('Location: /');
     }
-        
