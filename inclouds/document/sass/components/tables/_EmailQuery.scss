@@ -3,8 +3,10 @@
     bottom: 1rem;
     left: 1rem;
     text-align: center;
-    background-color: #d3d3d3;
-    box-shadow: 0 0 4px #999;
+    background-image: linear-gradient(to left,  #4ad1df 50%, tomato 50% );
+    box-shadow: 0 0 14px #999;
+    padding: 10px;
+    border-radius: 5px;
 
     thead {
         border-bottom: 1px solid #333;

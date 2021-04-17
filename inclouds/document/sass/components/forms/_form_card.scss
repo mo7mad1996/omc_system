@@ -84,6 +84,7 @@
             &[disabled] {
                 background-color: #d7d5d5;
                 color: rgb(148, 142, 142);
+                cursor: not-allowed;
 
                 &:hover {
                     filter: none;
