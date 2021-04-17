@@ -1,0 +1,21 @@
+.EmailQuery {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    text-align: center;
+    background-color: #d3d3d3;
+    box-shadow: 0 0 4px #999;
+
+    thead {
+        border-bottom: 1px solid #333;
+
+        th {
+            padding: 2px 5px;
+        }
+    }
+    
+    td {
+        padding: 2px 5px;
+        min-width: 170px;
+    }
+}

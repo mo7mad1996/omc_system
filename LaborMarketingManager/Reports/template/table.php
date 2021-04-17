@@ -32,8 +32,8 @@
         'addedBy'            => 'اضيف عبر'
     );
 
+    // Multiple Workers
     if($rows_count > 1){
-        // Multiple Workers
 
         // table head
         echo '<table class="table table-striped"><thead><tr>';

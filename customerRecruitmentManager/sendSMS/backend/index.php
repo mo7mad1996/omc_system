@@ -1,19 +1,19 @@
 <?php
 
     if(isset($_POST['sendSMS'])) {
- 
-        $to = implode(',', $_POST['to']);
+
+        $to      = implode(',', $_POST['to']);
         $message = $_POST['msg'];
-        
+
         $service_plan_id = 'c256b4758580437693c014aadcc48e58';
-        $bearer_token = '75c45e74490f42b39d4142c27ecc2502';
-        
-        
-        $send_from = "+201067149417";
-        
+        $bearer_token    = '75c45e74490f42b39d4142c27ecc2502';
+
+
+        $send_from = "عمال مصر"; // Company name or company nummber.
+
         $recipient_phone_numbers = $to;  //May be several, separate with a comma `,`.
-        
-        
+
+
         // Check recipient_phone_numbers for multiple numbers and make it an array.
         if(stristr($recipient_phone_numbers, ',')) {
             $recipient_phone_numbers = explode(',', $recipient_phone_numbers);
@@ -44,11 +44,10 @@
         if(curl_errno($ch)) {
             header('Location: ' . $_POST['location'] . '?msg=' . curl_error($ch)); // back to page
 
-            echo 'Curl error: ' . curl_error($ch);
+            // echo 'Curl error: ' . curl_error($ch);
         } else {
             header('Location: ' . $_POST['location'] . '?msg=sent'); // back to page
         }
-        
+
         curl_close($ch);
-        
     }

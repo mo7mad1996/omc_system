@@ -51,7 +51,7 @@
     </div>
 
     <hr>
-    
+
     <div class=buttons>
         <button type="submit">إرسال</button>
     </div>
@@ -69,22 +69,39 @@
 </script>
 
 
-<?php 
-    if(isset($_GET['err'])) {
-        echo "
-            <div class='msg err' onclick='this.remove()'>
-                <b>خطأ</b>
-                فشل في ارسال الايميل
-            </div>
-        ";
+<?php if(isset($_GET['EmailQuery'])) { 
+    $sent = json_decode($_GET['sent']);
+    $err = json_decode($_GET['err']);
+    if( count($sent) >= count($err) ) {
+        $loop = $sent;
+    } else {
+        $loop = $err;
     }
+    ?>
+<table class=EmailQuery>
+    <thead>
+        <th>تم الارسال</th>
+        <th>تعذر الارسال</th>
+    </thead>
+    <tbody>
+        <?php foreach($loop as $idx => $email) {
+            echo "
+                <tr>
+                    <td>". (isset($sent[$idx]) ? $sent[$idx] : '') ."</td>
+                    <td>". (isset($err[$idx]) ? $err[$idx] : '') ."</td>
+                </tr>
+            ";
+        }?>
+    </tbody>
+</table>
+<?php } ?>
 
-    if(isset($_GET['sent'])) {
-        echo "
-            <div class='msg Success' onclick='this.remove()'>
-                <b>تم</b>
-                تم بنجاح
-            </div>
-        ";
-    }
-?>
+<!-- 
+<div class='msg err' onclick='this.remove()'>
+    <b>خطأ</b>
+    فشل في ارسال الايميل
+</div>
+<div class='msg Success' onclick='this.remove()'>
+    <b>تم</b>
+    تم بنجاح
+</div> -->
