@@ -4,12 +4,19 @@
     if(isset($_POST['adduser'])) {
         include_once "../../inclouds/database/connect.php";
 
-        $username = $_POST['username'];
-        $name = $_POST['name'];
-        $password = $_POST['password'];
-        $permission = $_POST['permission'];
+        $arr = $_POST;
+        array_pop($arr);
 
-        $sql = "SELECT * FROM users WHERE username = '$username'" ;
+        if(isset($arr['adduser'])) {
+            array_pop($arr);
+        }
+
+    //     $username = $_POST['username'];
+    //     $name = $_POST['name'];
+    //     $password = $_POST['password'];
+    //     $permission = $_POST['permission'];
+
+        $sql = "SELECT * FROM users WHERE username = '" . $arr['username']  . "' OR code = '" . $arr['code'] . "'" ;
         $res = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($res);
 
@@ -24,12 +31,10 @@
         } else {
             $sql = "
             INSERT INTO 
-            users (`username`, `name`, `password`, `permission`) 
-            VALUES( '$username',  '$name', '$password', '$permission')";
-            
+            users (" . implode(', ', array_keys($arr)) . ") 
+            VALUES('" . implode("', '", $arr) . "')";
             mysqli_query($conn, $sql);
-
-
+            
             if(isset($_POST['location'])) {
                 header('Location: ' . $_POST['location'] . '?msg=Success');
             } else {

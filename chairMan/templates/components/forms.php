@@ -7,10 +7,10 @@
 <?php 
     if(isset($_GET['msg'])) {
         if($_GET['msg'] == 'Success') {
-            echo "<div class='msg Success'><b class='d-block text-center'>تم</b>تم تسجيل المستخدم بنجاح</div>";
+            echo "<div class='msg Success text-center'><b class='d-block '>تم</b>تم تسجيل المستخدم بنجاح</div>";
         }
         if($_GET['msg'] == 'err') {
-            echo "<div class='msg err'><b class='d-block text-center'>خطأ</b>المستخدم موجود بالفعل</div>";
+            echo "<div class='msg err text-center'><b class='d-block '>خطأ</b>اسم المستخدم او رقم الكود<br> موجودين بالفعل</div>";
         }
     }
 ?>

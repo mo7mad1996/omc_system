@@ -20,35 +20,38 @@
     }
 
 
-        function addUsersTable($conn) {
-            $colomns = " 
-                id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY ,
-                username TEXT NOT NULL ,
-                name TEXT NOT NULL ,
-                password TEXT NOT NULL , 
-                permission TEXT NOT NULL
-            ";
-            $sql = "CREATE TABLE IF NOT EXISTS users($colomns)";
-            $res = mysqli_query($conn, $sql);
-        }
+    function addUsersTable($conn) {
+        $colomns = " 
+            id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY ,
+            username TEXT NOT NULL ,
+            name TEXT NOT NULL ,
+            password TEXT NOT NULL , 
+            code INT NOT NULL, 
+            permission TEXT NOT NULL
+        ";
+        $sql = "CREATE TABLE IF NOT EXISTS users($colomns)";
+        $res = mysqli_query($conn, $sql);
+    }
 
 
-    function addSuperAdmin($conn) {
-        $sql = "SELECT * FROM users";
-        $res = mysqli_query( $conn, $sql);
+function addSuperAdmin($conn) {
+    $sql = "SELECT * FROM users";
+    $res = mysqli_query( $conn, $sql);
 
-        if( mysqli_num_rows($res) == 0 ){
-            $sql = "
-            INSERT INTO users(
+    if( mysqli_num_rows($res) == 0 ){
+        $sql = "
+        INSERT INTO users(
                 username,
                 name,
                 password,
+                code,
                 permission
             )
             VALUES (
                 'boss',
                 'محمد ابراهيم',
                 'boss',
+                '-4',
                 'CBD'
             )";
             $res = mysqli_query( $conn, $sql);

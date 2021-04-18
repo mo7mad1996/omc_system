@@ -17,6 +17,12 @@
 		<label for="password">كلمه المرور</label>
 		<input id="password" required name="password" />
 	</div>
+	
+	<!-- code -->
+	<div class="input_field">
+		<label for="code">كود الموظف</label>
+		<input id="code" type="number" required name="code" />
+	</div>
 
 	<!-- permission -->
 	<div class="input_field">
@@ -47,10 +53,10 @@
 <?php 
     if(isset($_GET['msg'])) {
         if($_GET['msg'] == 'Success') {
-            echo "<div class='msg Success'><b class='d-block text-center'>تم</b>تم تسجيل المستخدم بنجاح</div>";
+            echo "<div class='msg Success text-center'><b class='d-block'>تم</b>تم تسجيل المستخدم بنجاح</div>";
         }
         if($_GET['msg'] == 'err') {
-            echo "<div class='msg err'><b class='d-block text-center'>خطأ</b>المستخدم موجود بالفعل</div>";
+            echo "<div class='msg err text-center'><b class='d-block '>خطأ</b>اسم المستخدم او كود الموظف <br>موجودين بالفعل</div>";
         }
     }
 ?>

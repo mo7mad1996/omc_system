@@ -1,35 +1,31 @@
+<?php
+  $links = array(
+    "/Reports" => "تقرير عمال",
+    "/ReportsEmployee" => "تقرير موظفين",
+    "/addWorker" => "إضافه عامل",
+    "/addEmployee" => "إضافه موظف"
+  );
+?>
+
+
 <div class="container my-2">
   <nav class="navbar navbar-expand-lg navbar-light bg-light print-none">
     <div class="collapse navbar-collapse">
 
-        <li class="nav-item">
-          <a 
-            class="nav-link " 
-            href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/Reports"
-            >
-             تقارير 
-           </a>
-        </li>
+      <?php foreach($links as $to => $lable){ ?>
 
         <li class="nav-item">
           <a 
-            class="nav-link " 
-            href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/addWorker"
+            class="nav-link active" 
+            href="/<?php echo json_decode($_SESSION['user'])->permission . $to ;?>"
+            title = "<?php echo $lable; ?>"
             >
-             إضافه عامل
+            <?php echo $lable; ?>
            </a>
         </li>
 
-        <li class="nav-item">
-          <a 
-            class="nav-link " 
-            href="/<?php echo json_decode($_SESSION['user'])->permission ;?>/addEmployee"
-            >
-             إضافه موظف
-           </a>
-        </li>
+      <?php } ?>
 
     </div>
   </nav>
 </div>
-

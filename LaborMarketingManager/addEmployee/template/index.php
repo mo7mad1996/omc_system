@@ -18,6 +18,12 @@
 		<input id="password" required name="password" />
 	</div>
 
+	<!-- code -->
+	<div class="input_field">
+		<label for="code">كود الموظف</label>
+		<input id="code" type="number" required name="code" />
+	</div>
+	
 	<!-- permission -->
 	<div class="input_field">
 		<label for="permission">الوظيفه</label>
