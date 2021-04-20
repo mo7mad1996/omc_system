@@ -42,11 +42,6 @@ echo "
             </div>
         </div>
 
-        <div class='input_field'>
-            <label for='res2_continue_date'>تاريخ المتابعه</label>
-            <input id='res2_continue_date' name='res2_continue_date' type='date' value='" . $row['res2_continue_date'] . "' >
-        </div>
-        
     </div>
 </fieldset>
 ";

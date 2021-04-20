@@ -34,14 +34,10 @@
         </div>
 
         <div class='input_field'>
-            <label for='res1_continue_date'>تاريخ المتابعه</label>
-            <input id='res1_continue_date' name='res1_continue_date' type='date'  value='" . $row['res1_continue_date'] . " '>
+            <label for='next_continue_date'>تاريخ المتابعه المستقبليه</label>
+            <input id='next_continue_date' name='next_continue_date' type='date'  value='" . $row['next_continue_date'] . " '>
         </div>
 
-        <div class='input_field'>
-            <label for='res1_next_continue_date'>تاريخ المتابعه المستقبليه</label>
-            <input id='res1_next_continue_date' name='res1_next_continue_date' type='date'  value='" . $row['res1_next_continue_date'] . "' >
-        </div>
         
     </div>
 </fieldset>

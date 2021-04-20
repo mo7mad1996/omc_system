@@ -1,6 +1,6 @@
 form.addWorkers {
     background-color: #e4dff0;
-    margin: 1rem 40px;
+    margin: 0 40px;
     border-radius: 10px;
     box-shadow: 0px 10px 20px #999;
 
@@ -38,25 +38,22 @@ form.addWorkers {
                 margin-bottom: 10px;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
-
             select ,
             input:not([type="checkbox"])  {
                 padding: 5px 8px;
                 display: block;
                 width: 100%;
                 border-radius: 5px;
-                
+
                 &:focus {
                     box-shadow: 0 0 4px #5b4fa0;
                 }
             }
-
             input{
                 border: 2px solid #bda3ff;
                 background-color: #f5f1ff;
                 color: #5b4fa0;
             }
-            
             select {
                 
                 border: 2px solid #bda3ff;
@@ -80,8 +77,8 @@ form.addWorkers {
             left: 0;
             background: linear-gradient(top, rgb(177, 175, 175) 0%, #45484d 100%);
             border-radius: 4px;
-            box-shadow: inset 0px 1px 1px rgba(170, 168, 184, 0.5), 0px 1px 0px rgba(255,255,255,.4);
-             
+            box-shadow: inset 0px 1px 1px rgba(87, 67, 221, 0.5), 0px 1px 0px rgba(255,255,255,.4);
+                
             &:after {
                 content: '';
                 width: 12px;
@@ -101,11 +98,15 @@ form.addWorkers {
             }
         }
             input[type=checkbox] {
-                
                 visibility: hidden;
-                &:checked + label:after {
-                    opacity: 1;
-                }    
+                
+                &:checked + label {
+                    background: #4ed68b;
+                    
+                    &:after {
+                        opacity: 1;
+                    }
+                }
             }
         }
         /* end .squaredThree */
@@ -129,7 +130,7 @@ form.addWorkers {
                 background-color: #8c71cf;
                 color: #fff;
             }
-            
+
             &:focus ,
             &:hover {
                 filter: brightness(80%);

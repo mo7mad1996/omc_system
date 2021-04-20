@@ -46,14 +46,14 @@
                 &:focus::after ,
                 &:hover::after {
                     content: '';
-                    width: 10px;
-                    height: 10px;
-                    left: 10px;
+                    width: 5px;
+                    height: 100%;
+                    left: 0px;
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    border-radius: 50%;
-                    background: yellowgreen;
+                    border-radius: 0%;
+                    background: #de0124;
                 }
             }
         }

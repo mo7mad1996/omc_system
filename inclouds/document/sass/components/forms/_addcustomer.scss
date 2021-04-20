@@ -32,6 +32,7 @@ form.addcustomer {
         .input_field {
             padding: 10px;
             width: 30%;
+            min-width: 200px;
 
             label {
                 display: block;
@@ -79,7 +80,7 @@ form.addcustomer {
             left: 0;
             background: linear-gradient(top, rgb(177, 175, 175) 0%, #45484d 100%);
             border-radius: 4px;
-            box-shadow: inset 0px 1px 1px rgba(170, 168, 184, 0.5), 0px 1px 0px rgba(255,255,255,.4);
+            box-shadow: inset 0px 1px 1px rgba(87, 67, 221, 0.5), 0px 1px 0px rgba(255,255,255,.4);
              
             &:after {
                 content: '';
@@ -104,6 +105,9 @@ form.addcustomer {
                 visibility: hidden;
                 &:checked + label:after {
                     opacity: 1;
+                }    
+                &:checked + label {
+                    background: #4ed68b;
                 }    
             }
         }
