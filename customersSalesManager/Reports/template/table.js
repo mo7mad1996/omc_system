@@ -71,6 +71,12 @@ document.querySelector('#by').oninput = function () {
             formInput.setAttribute('type', "text");
             formInput.setAttribute('name', this.value);
     }
+
+    if (this.value) {
+
+    } else {
+
+    }
 }
 
 var colomns = [
