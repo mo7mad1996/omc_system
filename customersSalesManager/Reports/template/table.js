@@ -1,23 +1,78 @@
-
 document.querySelectorAll('th').forEach(el => el.setAttribute('title', el.innerText))
 let formInput = document.getElementById('formInput')
 
+// search By 
 document.querySelector('#by').oninput = function () {
     formInput.setAttribute('type', this.value);
     switch (this.value) {
-        case "text":
-            formInput.setAttribute('name', 'cumpany_name');
+        case "id":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('name', '');
             break;
 
-        case "date":
+        case "init_date":
+            formInput.setAttribute('type', "date");
             formInput.setAttribute('name', 'init_date');
             break;
 
-        default:
+        case "next_continue_date":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'next_continue_date');
+            break;
+
+        case "LastCallDate":
+            formInput.setAttribute('type', "datex");
+            formInput.setAttribute('name', 'LastCallDate');
+            break;
+
+        case "res1_called":
             formInput.setAttribute('type', "hidden");
-            formInput.setAttribute('name', '');
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res1_called');
+            break;
+
+        case "res1_offer":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res1_offer');
+            break;
+
+        case "res1_vist":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res1_vist');
+            break;
+
+        case "res2_sent":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res2_sent');
+            break;
+
+        case "res2_vist":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res2_vist');
+            break;
+
+        case "res2_reject":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res2_reject');
+            break;
+
+        case "res2_accept":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('value', "1");
+            formInput.setAttribute('name', 'res2_accept');
+            break;
+
+        default:
+            formInput.setAttribute('type', "text");
+            formInput.setAttribute('name', this.value);
     }
 }
+
 var colomns = [
     { a: 'id', b: '#' },
     { a: 'init_date', b: 'تاريخ التسجيل' },
@@ -50,9 +105,11 @@ colomns.forEach(el => {
     let input = document.createElement('input')
         , label = document.createElement('label')
         , div = document.createElement('div')
+
     input.checked = true;
     input.setAttribute('type', 'checkbox');
     input.setAttribute('id', el.a);
+
     label.setAttribute('for', el.a);
     label.innerHTML = el.b;
 

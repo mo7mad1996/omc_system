@@ -1,4 +1,6 @@
 <form class="form_card sendMail" action="../../customerRecruitmentManager/backend/whatsapp">
+    <H5 class="text-center mb-4">ارسال رساله واتساب</H5>
+
 
     <details>
         <summary>إلى</summary>
@@ -28,8 +30,15 @@
                         <?php echo $row['responsible_name']; ?>
                     </div>
                     <div class="col">
-                        <?php echo $row['phone']; ?>
+                        <a href="https://web.whtasapp.com/send?phone=+2<?php echo $row['phone']; ?>"
+                            title="فتح عبر واتساب">
+                            <?php echo $row['phone'];?>
+                        </a>
                     </div>
+
+                    <script>
+                        document.querySelectorAll('.customer a').forEach(el => el.onclick = e => e.stopPropagation())
+                    </script>
                 </label>
                 <input id="<?php echo $row['id']; ?>" type="checkbox" value="+2<?php echo $row['phone']; ?>"
                     name="to[]" />
@@ -76,7 +85,7 @@
     } else {
         $loop = $err;
     }?>
-<div class='pa-4 EmailQuery'>  
+<div class='pa-4 EmailQuery'>
     <table>
         <thead>
             <th>تم الارسال</th>
@@ -85,13 +94,13 @@
         <tbody>
             <?php foreach($loop as $idx => $email) {
                 echo "
-                <tr>
-                        <td>". (isset($sent[$idx]) ? $sent[$idx] : '') ."</td>
-                        <td>". (isset($err[$idx]) ? $err[$idx] : '') ."</td>
-                        </tr>
+                    <tr>
+                        <td>" . (isset($sent[$idx]) ? $sent[$idx] : '') . "</td>
+                        <td>" . (isset($err[$idx]) ? $err[$idx] : '') . "</td>
+                    </tr>
                 ";
             }?>
         </tbody>
     </table>
-</div> 
+</div>
 <?php } ?>

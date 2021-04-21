@@ -6,6 +6,10 @@
     outline: none;
 }
 
+.collapse:not(.show) {
+    display: flex;
+}
+
 a {
     color: inherit;
     text-decoration: none;

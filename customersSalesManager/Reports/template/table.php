@@ -1,37 +1,11 @@
 <?php
-
-    $titles = array(
-        "id"                 => "#",
-        "init_date"          => "تاريخ التسجيل",
-        "cumpany_name"       => "اسم العميل",
-        "company_type"       => "نوع القطاع الصناعي",
-        "city"               => "المدينه",
-        "area"               => "المنطقه",
-        "responsible_name"   => "اسم المسؤول",
-        "job"                => "الوظيفه",
-        "phone"              => "التليفون",
-        "email"              => "الايميل",
-        "service_type"       => "الخدمه المطلوبه",
-        "res1_called"        => "تم الاتصال",
-        "res1_offer"         => "طلب عرض",
-        "res1_vist"          => "طلب زياره",
-        "next_continue_date" => "تاريخ المتابعه المستقبليه",
-        "res2_sent"          => "تم ارسال العرض",
-        "res2_vist"          => "تم الزياره",
-        "res2_reject"        => "تم رفض العرض",
-        "res2_accept"        => "تم قبول العرض",
-        "nots"               => "ملاحظات",
-        "LastCallDate"       => "تاريخ اخر اتصال",
-        "added_by"           => "اضيف بواسطه"
-    );
+    include_once "../../customersSalesManager/Reports/template/data.php";
 
     if($rows_count > 1){
         echo '<table class="table table-striped "><thead><tr>';
         
             foreach($titles as $key => $value) {
-                print "
-                    <th scope='col' class=$key>$value</th>
-                ";
+                print "<th scope='col' class=$key >$value</th>";
             }
 
         echo '</tr></thead><tbody>';

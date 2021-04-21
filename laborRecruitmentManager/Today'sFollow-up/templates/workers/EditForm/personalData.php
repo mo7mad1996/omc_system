@@ -12,12 +12,12 @@
             <label for="<?php echo $row['id']; ?>qualification">المؤهل</label>
 
             <select id="<?php echo $row['id']; ?>qualification" name="qualification">
-                <option value="1">لا يقرا و لا يكتب</option>
-                <option value="2">بدون مؤهل</option>
-                <option value="3">اعدادية</option>
-                <option value="4">دبلوم صنايع</option>
-                <option value="5">دبلوم تجارة</option>
-                <option value="0">دبلوم زراعة</option>
+                <option <?php echo($row['qualification'] == 1 ? 'selected' : '' );?> value="1">لا يقرا و لا يكتب</option>
+                <option <?php echo($row['qualification'] == 2 ? 'selected' : '' );?> value="2">بدون مؤهل</option>
+                <option <?php echo($row['qualification'] == 3 ? 'selected' : '' );?> value="3">اعدادية</option>
+                <option <?php echo($row['qualification'] == 4 ? 'selected' : '' );?> value="4">دبلوم صنايع</option>
+                <option <?php echo($row['qualification'] == 5 ? 'selected' : '' );?> value="5">دبلوم تجارة</option>
+                <option <?php echo($row['qualification'] == 0 ? 'selected' : '' );?> value="0">دبلوم زراعة</option>
             </select>
         </div>
 

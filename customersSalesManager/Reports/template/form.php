@@ -1,16 +1,25 @@
+<?php
+    include_once "../../customersSalesManager/Reports/template/data.php"; 
+    $arr = $titles;
+    array_pop($arr);
+?>
 <div class="search_by print-none ">
     <h3>بحث بواسطه</h3>
 
     <div class="form-control">
         <div class="group ">
             <select id="by">
-                <option value="hidden">الكل</option>
-                <option value="date">تاريخ التسجيل</option>
-                <option value="text">اسم المؤسسه</option>
+                <?php 
+                    foreach($arr as $key => $value){
+                        if($key == 'id') {$value = 'الكل';}
+                ?>
+
+                     <option value="<?php echo $key;?>" sele><?php echo $value; ?></option>
+                <?php } ?>
             </select>
             <form>
                 <input id="formInput" type="hidden" />
-                <button type="subm  it">فلتره</button>
+                <button type="submit">فلتره</button>
             </form>
         </div>
 
