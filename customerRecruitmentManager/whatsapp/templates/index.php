@@ -15,7 +15,7 @@
                 if(!(@include_once "../inclouds/database/connect.php")) {
                     @include_once "../../inclouds/database/connect.php";
                 }
-                $sql = "SELECT id, phone , responsible_name, cumpany_name FROM customers WHERE phone != '' ";
+                $sql = "SELECT id, $colomn1 , $colomn2, $colomn3 FROM $table WHERE phone != '' ";
                 $res = mysqli_query($conn, $sql);
 
                 if(mysqli_num_rows($res) > 0) {
@@ -24,23 +24,24 @@
             <div class="customer">
                 <label for="<?php echo $row['id']; ?>">
                     <div class="col">
-                        <?php echo $row['cumpany_name']; ?>
-                    </div>
-                    <div class="col">
-                        <?php echo $row['responsible_name']; ?>
-                    </div>
-                    <div class="col">
-                        <a href="https://web.whtasapp.com/send?phone=+2<?php echo $row['phone']; ?>"
+                        <a href="https://web.whtasapp.com/send?phone=+2<?php echo $row[$colomn1]; ?>"
                             title="فتح عبر واتساب">
-                            <?php echo $row['phone'];?>
+                            <?php echo $row[$colomn1];?>
                         </a>
                     </div>
 
+                    <div class="col">
+                        <?php echo $row[$colomn2]; ?>
+                    </div>
+                  
+                    <div class="col">
+                        <?php echo $row[$colomn3]; ?>
+                    </div>
                     <script>
                         document.querySelectorAll('.customer a').forEach(el => el.onclick = e => e.stopPropagation())
                     </script>
                 </label>
-                <input id="<?php echo $row['id']; ?>" type="checkbox" value="+2<?php echo $row['phone']; ?>"
+                <input id="<?php echo $row['id']; ?>" type="checkbox" value="+2<?php echo $row[$colomn1]; ?>"
                     name="to[]" />
             </div>
 

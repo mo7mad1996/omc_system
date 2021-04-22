@@ -1,21 +1,60 @@
-
 document.querySelectorAll('th').forEach(el => el.setAttribute('title', el.innerText))
-let formInput = document.getElementById('formInput')
+let formInput = document.getElementById('formInput'),
+    formSelect = document.getElementById('formSelect')
 
+// search By 
 document.querySelector('#by').oninput = function () {
-    formInput.setAttribute('type', this.value);
+
     switch (this.value) {
-        case "text":
-            formInput.setAttribute('name', 'person_name');
+        case "id":
+            formInput.setAttribute('type', "hidden");
+            formInput.setAttribute('name', '');
             break;
 
-        case "date":
+        case "registr_date":
+            formInput.setAttribute('type', "date");
             formInput.setAttribute('name', 'registr_date');
             break;
 
+        case "next_continue_date":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'next_continue_date');
+            break;
+
+        case "final_call":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'final_call');
+            break;
+
+        case "continue1_date":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'continue1_date');
+            break;
+
+        case "continue2_date":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'continue2_date');
+            break;
+
+        case "continue3_date":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'continue3_date');
+            break;
+
+        case "addedBy":
+            formSelect.classList.remove('d-none');
+            formSelect.setAttribute('name', 'added_by')
+            formInput.setAttribute('name', '')
+            formInput.classList.add('d-none')
+            break;
+
         default:
-            formInput.setAttribute('type', "hidden");
-            formInput.setAttribute('name', '');
+            formSelect.classList.add('d-none');
+            formSelect.setAttribute('name', '')
+            formInput.classList.remove('d-none')
+            formInput.setAttribute('type', "text");
+            formInput.setAttribute('name', this.value);
+
     }
 }
 var colomns = [

@@ -2,35 +2,7 @@
 
     include "../../LaborMarketingManager/Reports/template/data.php";
 
-    $arr = array(
-        'id'                 => '#',
-        
-        'the_day'            => 'اليوم',
-        'registr_date'       => 'تاريخ التسجيل',
-        
-        'person_name'        => 'اسم العامل',
-        'qualification'      => 'المؤهل',
-        'phone'              => 'التليفون',
-        'city'               => 'محافظه',
-        'age'                => 'السن',
-
-        'result'             => 'النتيجه',
-        'nots'               => 'ملاحظات',
-        'next_continue_date' => 'تاريخ المتابعه المستقبليه',
-        'final_call'         => 'تاريخ اخر اتصال',
-
-        'continue1'          => 'نتيجه اول متابعه',
-        'continue1_date'     => 'تاريخ اول متابعه',
-
-        'continue2'          => 'نتيجه ثان متابعه',
-        'continue2_date'     => 'تاريخ ثان متابعه',
-
-        'continue3'          => 'نتيجه ثالث متابعه',
-        'continue3_date'     => 'تاريخ ثالث متابعه',
-
-        'factory'            => 'المصنع',
-        'addedBy'            => 'اضيف عبر'
-    );
+    $arr =  $titles;
 
     // Multiple Workers
     if($rows_count > 1){

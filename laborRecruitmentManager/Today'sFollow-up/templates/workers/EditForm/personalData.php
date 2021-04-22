@@ -18,6 +18,9 @@
                 <option <?php echo($row['qualification'] == 4 ? 'selected' : '' );?> value="4">دبلوم صنايع</option>
                 <option <?php echo($row['qualification'] == 5 ? 'selected' : '' );?> value="5">دبلوم تجارة</option>
                 <option <?php echo($row['qualification'] == 0 ? 'selected' : '' );?> value="0">دبلوم زراعة</option>
+                <option <?php echo($row['qualification'] == 6 ? 'selected' : '' );?> value="6">محو أميه</option>
+                <option <?php echo($row['qualification'] == 7 ? 'selected' : '' );?> value="7">طالب</option>
+                <option <?php echo($row['qualification'] == 8 ? 'selected' : '' );?> value="8">مؤهل عالي</option>
             </select>
         </div>
 

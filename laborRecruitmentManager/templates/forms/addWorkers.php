@@ -46,7 +46,10 @@
 					<option value="3">اعدادية</option>
 					<option value="4">دبلوم صنايع</option>
 					<option value="5">دبلوم تجارة</option>
+					<option value="6">محو اميه</option>
 					<option value="0">دبلوم زراعة</option>
+					<option value="7">طالب </option>
+					<option value="8">مؤهل عالي</option>
 				</select>
 			</div>
 

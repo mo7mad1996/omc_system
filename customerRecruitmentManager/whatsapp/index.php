@@ -7,6 +7,10 @@
         
         // static variables
         $page_name = "ارسال رساله عبر واتساب";
+        $table = "customers";
+        $colomn1 = "phone";
+        $colomn2 = "responsible_name";
+        $colomn3 = "cumpany_name";
         
         require_once "../../inclouds/document/static/head.php";
 

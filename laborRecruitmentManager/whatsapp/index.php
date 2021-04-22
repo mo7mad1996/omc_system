@@ -9,6 +9,11 @@
         
         // static variables
         $page_name = "واتساب";
+        $table = "workers";
+        $colomn1 = "phone";
+        $colomn2 = "person_name";
+        $colomn3 = "age";
+        
         
         require_once "../../inclouds/document/static/head.php";
         

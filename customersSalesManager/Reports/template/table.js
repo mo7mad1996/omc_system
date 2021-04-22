@@ -1,9 +1,10 @@
 document.querySelectorAll('th').forEach(el => el.setAttribute('title', el.innerText))
-let formInput = document.getElementById('formInput')
+let formInput = document.getElementById('formInput'),
+    formSelect = document.getElementById('formSelect')
 
 // search By 
 document.querySelector('#by').oninput = function () {
-    formInput.setAttribute('type', this.value);
+
     switch (this.value) {
         case "id":
             formInput.setAttribute('type', "hidden");
@@ -18,11 +19,6 @@ document.querySelector('#by').oninput = function () {
         case "next_continue_date":
             formInput.setAttribute('type', "date");
             formInput.setAttribute('name', 'next_continue_date');
-            break;
-
-        case "LastCallDate":
-            formInput.setAttribute('type', "datex");
-            formInput.setAttribute('name', 'LastCallDate');
             break;
 
         case "res1_called":
@@ -67,15 +63,24 @@ document.querySelector('#by').oninput = function () {
             formInput.setAttribute('name', 'res2_accept');
             break;
 
+        case "LastCallDate":
+            formInput.setAttribute('type', "date");
+            formInput.setAttribute('name', 'LastCallDate');
+            break;
+
+        case "added_by":
+            formSelect.classList.remove('d-none');
+            formSelect.setAttribute('name', 'added_by')
+            formInput.setAttribute('name', '')
+            formInput.classList.add('d-none')
+            break;
+
         default:
+            formSelect.classList.add('d-none');
+            formSelect.setAttribute('name', '')
+            formInput.classList.remove('d-none')
             formInput.setAttribute('type', "text");
             formInput.setAttribute('name', this.value);
-    }
-
-    if (this.value) {
-
-    } else {
-
     }
 }
 

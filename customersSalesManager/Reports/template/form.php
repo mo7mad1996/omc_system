@@ -13,19 +13,18 @@
                     foreach($arr as $key => $value){
                         if($key == 'id') {$value = 'الكل';}
                 ?>
-                     <option value="<?php echo $key;?>" sele><?php echo $value; ?></option>
+                     <option value="<?php echo $key;?>"><?php echo $value; ?></option>
                 <?php } ?>
             </select>
             <form>
                 <input id="formInput" type="hidden" />
-                <select name='added_by'>
-                    <option value=""></option>
+                <select id='formSelect' class="d-none">
                     <?php 
                         $s = "SELECT name, id FROM users WHERE permission = 'customerRecruitmentManager'";
                         $p = mysqli_query($conn, $s);
-                            while ($row = mysqli_fetch_assoc($p)) {
-                                echo "<option value=" . $row['id'] . ">" . $row['name'] . "</option>";
-                            }
+                        while ($row = mysqli_fetch_assoc($p)) {
+                            echo "<option value=" . $row['id'] . ">" . $row['name'] . "</option>";
+                        }
                     ?>
                 </select>
                 <button type="submit">فلتره</button>
