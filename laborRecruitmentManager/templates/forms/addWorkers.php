@@ -96,6 +96,11 @@
 				<label for="age">السن</label>
 				<input name="age" id="age" type="number" value="21" />
 			</div>
+
+			<div class="input_field">
+				<label for="job_title">المهنه او الحرفه</label>
+				<input name="job_title" id="job_title" type="text" />
+			</div>
 		</div>
 	</fieldset>
 
@@ -132,6 +137,11 @@
 			<div class="input_field">
 				<label for="final_call">تاريخ اخر اتصال</label>
 				<input id="final_call" name="final_call" type="date" />
+			</div>
+
+			<div class="input_field">
+				<label for="get_from">مصدر المكالمه</label>
+				<input name="get_from" id="get_from" type="text" />
 			</div>
 		</div>
 	</fieldset>

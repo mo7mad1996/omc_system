@@ -79,6 +79,9 @@ $titles = array(
     'next_continue_date' => 'تاريخ المتابعه المستقبليه',
     'final_call'         => 'تاريخ اخر اتصال',
 
+    'get_from'           => 'مصدر المكالمه',
+    'job_title'           => 'المهنه او الحرفه',
+
     'continue1'          => 'نتيجه اول متابعه',
     'continue1_date'     => 'تاريخ اول متابعه',
 

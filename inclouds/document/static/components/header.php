@@ -19,7 +19,7 @@
 			<menu>
 				<ul>
 					<a href="/<?php echo json_decode($_SESSION['user'])->permission; ?>/edit">
-						<li>الاعدادات</li>
+						<li>الإعدادات</li>
 					</a>
 					<a href="/logout">
 						<li>خروج</li>

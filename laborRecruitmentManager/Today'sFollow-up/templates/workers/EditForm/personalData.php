@@ -67,5 +67,10 @@
             <label for="<?php echo $row['id']; ?>age">السن</label>
             <input name="age" id="<?php echo $row['id']; ?>age" type="number" value="<?php echo $row['age']; ?>" />
         </div>
+        
+        <div class="input_field">
+            <label for="<?php echo $row['id']; ?>job_title">المهنه او الحرفه</label>
+            <input name="job_title" id="<?php echo $row['id']; ?>job_title" type="text"  value="<?php echo $row['job_title']; ?>" />
+        </div>
     </div>
 </fieldset>
