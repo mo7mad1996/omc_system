@@ -33,7 +33,7 @@ var colomns = [
     { a: 'continue2', b: 'متابعه 2' },
     { a: 'continue3', b: 'متابعه 3' },
     { a: 'factory', b: 'المصنع' },
-    { a: 'addedBy', b: 'اضيف عبر' },
+    { a: 'added_by', b: 'اضيف عبر' },
 ],
     colomnsElemnt = document.getElementById('colomns');
 

@@ -1,62 +1,12 @@
 document.querySelectorAll('th').forEach(el => el.setAttribute('title', el.innerText))
-let formInput = document.getElementById('formInput'),
-    formSelect = document.getElementById('formSelect')
+const formInput = document.getElementById('formInput'),
+    the_day = document.querySelector('[data-id=the_day]'),
+    result = document.querySelector('[data-id=result]'),
+    formSelect = document.querySelector('[data-id=formSelect]'),
+    qualification = document.querySelector('[data-id=qualification]'),
+    city = document.querySelector('[data-id=city]'),
+    colomnsElemnt = document.getElementById('colomns');
 
-// search By 
-document.querySelector('#by').oninput = function () {
-
-    switch (this.value) {
-        case "id":
-            formInput.setAttribute('type', "hidden");
-            formInput.setAttribute('name', '');
-            break;
-
-        case "registr_date":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'registr_date');
-            break;
-
-        case "next_continue_date":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'next_continue_date');
-            break;
-
-        case "final_call":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'final_call');
-            break;
-
-        case "continue1_date":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'continue1_date');
-            break;
-
-        case "continue2_date":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'continue2_date');
-            break;
-
-        case "continue3_date":
-            formInput.setAttribute('type', "date");
-            formInput.setAttribute('name', 'continue3_date');
-            break;
-
-        case "addedBy":
-            formSelect.classList.remove('d-none');
-            formSelect.setAttribute('name', 'added_by')
-            formInput.setAttribute('name', '')
-            formInput.classList.add('d-none')
-            break;
-
-        default:
-            formSelect.classList.add('d-none');
-            formSelect.setAttribute('name', '')
-            formInput.classList.remove('d-none')
-            formInput.setAttribute('type', "text");
-            formInput.setAttribute('name', this.value);
-
-    }
-}
 var colomns = [
     { a: 'id', b: '#' },
 
@@ -87,9 +37,8 @@ var colomns = [
     { a: 'continue3_date', b: 'تاريخ ثالث متابعه' },
 
     { a: 'factory', b: 'المصنع' },
-    { a: 'addedBy', b: 'اضيف عبر' }
-],
-    colomnsElemnt = document.getElementById('colomns');
+    { a: 'added_by', b: 'اضيف عبر' }
+]
 
 colomns.forEach(el => {
     let input = document.createElement('input')
@@ -111,3 +60,95 @@ colomns.forEach(el => {
     div.appendChild(input)
     colomnsElemnt.appendChild(div)
 })
+
+// search By 
+document.querySelector('#by').oninput = function () {
+
+    reset()
+
+    switch (this.value) {
+        case "id":
+            formInput.setAttribute('name', '');
+            break;
+
+        case 'registr_date':
+            toDate()
+            break;
+
+        case 'next_continue_date':
+            toDate()
+            break;
+
+        case 'final_call':
+            toDate()
+            break;
+
+        case 'continue1_date':
+            toDate()
+            break;
+
+        case 'continue2_date':
+            toDate()
+            break;
+
+        case 'continue3_date':
+            toDate()
+            break;
+
+        case 'the_day':
+            the_day.classList.remove('d-none')
+            the_day.setAttribute('name', this.value)
+            break;
+
+        case 'qualification':
+            qualification.classList.remove('d-none')
+            qualification.setAttribute('name', this.value)
+            break;
+
+        case 'city':
+            city.classList.remove('d-none')
+            city.setAttribute('name', this.value)
+            break;
+
+        case 'result':
+            result.classList.remove('d-none')
+            result.setAttribute('name', this.value)
+            break;
+
+        case 'added_by':
+            formSelect.classList.remove('d-none')
+            formSelect.setAttribute('name', this.value)
+            break;
+
+        default:
+            reset()
+            formInput.classList.remove('d-none')
+            formInput.setAttribute('name', this.value)
+    }
+}
+
+function reset() {
+    restInput()
+
+    formInput.setAttribute('type', 'text');
+
+    formSelect.classList.add('d-none');
+    result.classList.add('d-none');
+    the_day.classList.add('d-none');
+
+    formSelect.setAttribute('name', '');
+    result.setAttribute('name', '');
+    the_day.setAttribute('name', '');
+    city.setAttribute('name', '');
+    qualification.setAttribute('name', '');
+}
+
+function restInput() {
+    formInput.setAttribute('name', '');
+    formInput.classList.add('d-none')
+}
+
+function toDate() {
+    formInput.classList.remove('d-none')
+    formInput.setAttribute('type', 'date');
+}

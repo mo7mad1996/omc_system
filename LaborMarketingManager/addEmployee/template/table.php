@@ -20,7 +20,7 @@
                     <th scope="col" class="continue2">متابعه 2</th>
                     <th scope="col" class="continue3">متابعه 3</th>
                     <th scope="col" class="factory">المصنع</th>
-                    <th scope="col" class="addedBy">اضيف عبر</th>
+                    <th scope="col" class="added_by">اضيف عبر</th>
                 </tr>
             </thead>
         <tbody>';
@@ -30,7 +30,7 @@
             $r = mysqli_query($conn, $l);
             
             while($d = mysqli_fetch_assoc($r)) {
-                $addedBy =  $d['name'];
+                $added_by =  $d['name'];
             }
 
             echo
@@ -50,7 +50,7 @@
                     <td class='continue2'>" . $resultes[$row['continue2']] . "</td>
                     <td class='continue3'>" . $resultes[$row['continue3']] . "</td>
                     <td class='factory'>" . $row['factory'] . "</td>
-                    <td class='addedBy'>" . $addedBy . "</td>
+                    <td class='added_by'>" . $added_by . "</td>
                 </tr>
                 
             ";

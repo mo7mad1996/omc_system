@@ -15,7 +15,7 @@
             $r = mysqli_query($conn, $l);
             
             while($d = mysqli_fetch_assoc($r)) {
-                $addedBy =  $d['name'];
+                $added_by =  $d['name'];
             }
 
             echo "<tr>";
@@ -23,7 +23,7 @@
                     if(!($key == 'added_by')) {
                         echo "<td class='$key' title='$value'>" . $row[$key] . "</td>";
                     }  else {
-                        echo "<td class='$key' title='$value'>" . $addedBy . "</td>";
+                        echo "<td class='$key' title='$value'>" . $added_by . "</td>";
                     }
                 }
             echo "</tr>";
@@ -40,7 +40,7 @@
             $r = mysqli_query($conn, $l);
             
         while($d = mysqli_fetch_assoc($r)) {
-                $addedBy =  $d['name'];
+                $added_by =  $d['name'];
         }
         
         foreach($titles as $key => $value){
@@ -49,7 +49,7 @@
                 if(!($key == 'added_by')) {
                     echo "<div class='$key'>$value <div>" . $row[$key] . "</div></div>";
                 } else {
-                    echo "<div class='$key'>$value <div>" . $addedBy . "</div></div>";
+                    echo "<div class='$key'>$value <div>" . $added_by . "</div></div>";
                 }
             }
         }

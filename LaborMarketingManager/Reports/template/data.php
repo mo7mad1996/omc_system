@@ -92,5 +92,5 @@ $titles = array(
     'continue3_date'     => 'تاريخ ثالث متابعه',
 
     'factory'            => 'المصنع',
-    'addedBy'            => 'اضيف عبر'
+    'added_by'            => 'اضيف عبر'
 );

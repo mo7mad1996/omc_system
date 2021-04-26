@@ -22,7 +22,7 @@
             $r = mysqli_query($conn, $l);
             
             while($d = mysqli_fetch_assoc($r)) {
-                $addedBy =  $d['name'];
+                $added_by =  $d['name'];
             }
 
             echo "<tr>";
@@ -57,8 +57,8 @@
                         echo "<td class='$key' title='$value'>" . $resultes[$row[$key]] . "</td>";
                         break;
 
-                    case 'addedBy':
-                        echo "<td class='$key' title='$value'>" . $addedBy . "</td>";
+                    case 'added_by':
+                        echo "<td class='$key' title='$value'>" . $added_by . "</td>";
                         break;
 
                     default:
@@ -81,7 +81,7 @@
             $r = mysqli_query($conn, $l);
             
             while($d = mysqli_fetch_assoc($r)) {
-                $addedBy =  $d['name'];
+                $added_by =  $d['name'];
             }
 
             foreach($arr as $key => $value) {
@@ -115,8 +115,8 @@
                         echo "<div class=$key title='$value'>$value <div>" . $resultes[$row[$key]] . "</div> </div>";
                         break;
                         
-                    case 'addedBy':
-                        echo "<div class=$key title='$value'>$value <div>" . $addedBy . "</div> </div>";
+                    case 'added_by':
+                        echo "<div class=$key title='$value'>$value <div>" . $added_by . "</div> </div>";
                         break;
 
                     default: 
