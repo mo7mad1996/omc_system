@@ -24,8 +24,8 @@
             <div class="customer">
                 <label for="<?php echo $row['id']; ?>">
                     <div class="col">
-                        <a href="https://web.whtasapp.com/send?phone=+2<?php echo $row[$colomn1]; ?>"
-                            title="فتح عبر واتساب">
+                        <a href="https://web.whatsapp.com/send?phone=+2<?php echo $row[$colomn1]; ?>"
+                            title="فتح عبر واتساب" target="_blank">
                             <?php echo $row[$colomn1];?>
                         </a>
                     </div>
@@ -33,7 +33,7 @@
                     <div class="col">
                         <?php echo $row[$colomn2]; ?>
                     </div>
-                  
+
                     <div class="col">
                         <?php echo $row[$colomn3]; ?>
                     </div>

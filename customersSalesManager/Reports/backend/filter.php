@@ -5,7 +5,7 @@
     $sql = "SELECT * FROM customers";
         
     foreach($_GET as $key => $value) {
-        $sql = "SELECT * FROM customers WHERE $key = '$value'";
+        $sql = "SELECT * FROM customers WHERE $key LIKE '%$value%'";
     }
 
     $res = mysqli_query($conn, $sql);

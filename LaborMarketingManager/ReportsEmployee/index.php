@@ -15,5 +15,5 @@
 
         require_once "../../inclouds/document/static/page_close.php";
     } else {
-        // header('Location: /');
+        header('Location: /');
     }

@@ -72,27 +72,28 @@ document.querySelector('#by').oninput = function () {
             break;
 
         case 'registr_date':
-            toDate()
+            toDate(this.value)
+            viaMonth()
             break;
 
         case 'next_continue_date':
-            toDate()
+            toDate(this.value)
             break;
 
         case 'final_call':
-            toDate()
+            toDate(this.value)
             break;
 
         case 'continue1_date':
-            toDate()
+            toDate(this.value)
             break;
 
         case 'continue2_date':
-            toDate()
+            toDate(this.value)
             break;
 
         case 'continue3_date':
-            toDate()
+            toDate(this.value)
             break;
 
         case 'the_day':
@@ -130,6 +131,8 @@ document.querySelector('#by').oninput = function () {
 function reset() {
     restInput()
 
+    month.remove()
+
     formInput.setAttribute('type', 'text');
 
     formSelect.classList.add('d-none');
@@ -148,7 +151,29 @@ function restInput() {
     formInput.classList.add('d-none')
 }
 
-function toDate() {
+function toDate(value) {
     formInput.classList.remove('d-none')
     formInput.setAttribute('type', 'date');
+    formInput.setAttribute('name', value)
+}
+
+let month = document.createElement('input'), x;
+month.setAttribute('type', 'checkbox')
+month.setAttribute('title', 'بحث عبر الشهر')
+
+function viaMonth() {
+    insertAfter(formInput, month)
+
+    // change the value
+    month.onchange = function () {
+        if (month.checked) {
+            formInput.setAttribute('type', 'month')
+        } else {
+            formInput.setAttribute('type', 'date')
+        }
+    }
+}
+
+function insertAfter(referenceNode, newNode) {
+    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }

@@ -10,7 +10,7 @@ $sql = "SELECT * FROM workers";
 
     
 foreach($_GET as $key => $value) {
-    $sql = "SELECT * FROM workers WHERE $key = '$value'";
+    $sql = "SELECT * FROM workers WHERE $key LIKE '%$value%'";
 }
 
 $res = mysqli_query($conn, $sql);
