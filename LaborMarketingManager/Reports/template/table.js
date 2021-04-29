@@ -138,6 +138,8 @@ function reset() {
     formSelect.classList.add('d-none');
     result.classList.add('d-none');
     the_day.classList.add('d-none');
+    qualification.classList.add('d-none');
+    city.classList.add('d-none');
 
     formSelect.setAttribute('name', '');
     result.setAttribute('name', '');

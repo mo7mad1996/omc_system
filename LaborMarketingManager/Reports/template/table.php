@@ -2,6 +2,8 @@
 
     include "../../LaborMarketingManager/Reports/template/data.php";
 
+    echo "<div class='my-3 text-center fs-3'><b>تقرير بتاريخ </b>" . date('d-m-Y') . '</div>';
+
     $arr =  $titles;
 
     // Multiple Workers

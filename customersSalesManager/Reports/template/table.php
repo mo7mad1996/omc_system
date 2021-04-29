@@ -1,5 +1,7 @@
 <?php
     include_once "../../customersSalesManager/Reports/template/data.php";
+    
+    echo "<div class='my-3 text-center fs-3'><b>تقرير بتاريخ </b>" . date('d-m-Y') . '</div>';
 
     if($rows_count > 1){
         echo '<table class="table table-striped "><thead><tr>';
